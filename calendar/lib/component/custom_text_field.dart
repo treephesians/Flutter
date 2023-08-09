@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
+  final String initialValue;
   // true - 시간 / false - 내용
   final bool isTime;
   final FormFieldSetter<String> onSaved;
@@ -11,7 +12,8 @@ class CustomTextField extends StatelessWidget {
       {super.key,
       required this.label,
       required this.isTime,
-      required this.onSaved});
+      required this.onSaved,
+      required this.initialValue});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,8 @@ class CustomTextField extends StatelessWidget {
       // 줄바꿈이 가능하다!
       maxLines: isTime ? 1 : null,
       //expands: !isTime,
-      maxLength: 500,
+      initialValue: initialValue,
+      maxLength: 300,
       keyboardType: isTime ? TextInputType.number : TextInputType.multiline,
       inputFormatters: isTime
           ? [
@@ -67,6 +70,7 @@ class CustomTextField extends StatelessWidget {
         border: InputBorder.none,
         filled: true,
         fillColor: Colors.grey[300],
+        suffixText: isTime ? '시' : null,
       ),
     );
   }

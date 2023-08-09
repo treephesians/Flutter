@@ -9,6 +9,7 @@ const DEFAULT_COLORS = [
   'F44336',
   'FF9800',
   'FFEB3B',
+  'FCAF50',
   '2196F3',
   '3F51B5',
   '9C27B0',
