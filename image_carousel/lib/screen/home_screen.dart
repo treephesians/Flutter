@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // 얘가 이제 넘어가는 시간 ㅇㅇ
+    // 얘가 이제 넘어가는 시간 ㅇㅇ 후 오늘 못했다 미안하다!
     timer = Timer.periodic(Duration(seconds: 2), (timer) {
       int currentPage = controller.page!.toInt();
       int nextPage = currentPage + 1;
