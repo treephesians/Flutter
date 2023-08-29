@@ -77,12 +77,14 @@ class ListViewScreen extends StatelessWidget {
     return Container(
       height: height ?? 300, // null 이면 300 넣어라
       color: color,
-      child: Text(index.toString(),
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w700,
-            fontSize: 30.0,
-          )),
+      child: Text(
+        index.toString(),
+        style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontSize: 30.0,
+        ),
+      ),
     );
   }
 }
